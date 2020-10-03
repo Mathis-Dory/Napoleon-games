@@ -1,0 +1,61 @@
+h1, h2, h3{
+    color: white;
+    text-shadow: -2px -1px 11px black;
+}
+
+body{
+    font-family: cursive;
+    background-color: gray;
+    text-align: center;
+}
+
+#addRegiment{
+    margin: 6em;
+    text-align: center;
+}
+
+ol{
+    list-style-type: none;
+}
+fieldset{
+    border: 2px black solid;
+}
+
+input[type=button], input[type=submit], input[type=reset]{
+  font-family: cursive;
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+
+input[type=text] {
+    padding: 0;
+    height: 30px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .15);
+    background-color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+table{
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    border: 2px black solid;
+    border-collapse: collapse;
+    background-color: lightgray;
+    height: 14em;
+}
+
+.titre{
+    border: black 1px dashed;
+    width: 5em;
+}
+
+img{
+    width: 10em;
+}

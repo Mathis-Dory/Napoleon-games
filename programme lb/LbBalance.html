@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>GDE linebattle balance</title>
+    <script src="js/utils.js"></script>
+    <script src="js/balance.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="Author" content="Cody">
+</head>
+<body>
+<!-- En tête -->
+ <div>
+     <header>
+         <section class="introduction">
+             <h1>Bienvenue sur GDE linebattle balance</h1>
+             <p>
+                 Ce programme est developpé par <strong>Cody</strong> de la GDE.
+                 Son utilité est très simple, il permet de créer des équipes équilibrées pour les linebattles sur Holdfast.<br>
+             </p>
+             <h2>Fonctionnement</h2>
+             <p>
+             <ol>
+                 <li>Cliquez sur ajouter un régiment.</li>
+                 <li>Entrez le nom du régiment.</li>
+                 <li>Entrez le nombre de participants.</li>
+                 <li>Repondez aux questions qui apparaitront.</li>
+                 <li>Repétez l'opération pour tous les régiments.</li>
+                 <li>Cliquez lancer la balance.</li>
+                 <li>Reload la page si vous avez fait une erreur puis recommencez.</li>
+                <li>Entrez le nom des équipes.</li>
+                <li>Changez le couleur du tableau.</li>
+             </ol>
+             </p>
+         </section>
+     </header>
+ </div>
+<!-- Corps -->
+<div>
+    <section class="corps">
+        <div>
+            <form id="formRegiment" action=# onsubmit="genererBalance(this); return false;">
+                <fieldset id="addRegiment">
+                <div class="actionForm">
+                    <input type="button" value="Ajouter un régiment"  onclick="ajouterRegiment();">
+                    <input type="submit" value="Lancer la balance">
+                    <input type="button" value="Reset" onClick="window.location.reload();">
+                </div>
+                </fieldset>
+            </form>
+        </div><br>
+        <div id="teamTables">
+            <h2>GDE Monday's/Friday's Linebattle</h2>
+            <table id="team1">
+                <thead>
+                <tr>
+                    <th><input type="text" placeholder="Equipe 1"></th><th><input id="couleur1" type="color" onchange="changeColor();"></th><th id="total1">Total : </th>
+                </tr>
+                <tr>
+                    <th class="titre">Name</th><th class="titre">Number</th><th class="titre">Art</th><th class="titre">Skirm</th><th class="titre">Cav</th>
+                </tr>
+                </thead>
+                <tbody id="tableTeam1">
+
+                </tbody>
+            </table>
+            <table id="team2">
+                <thead>
+                <tr>
+                    <th><input type="text" placeholder="Equipe 2"></th><th><input id="couleur2" type="color" onchange="changeCouleur();"></th><th id="total2">Total : </th>
+                </tr>
+                <tr>
+                    <th class="titre">Name</th><th class="titre">Number</th><th class="titre">Art</th><th class="titre">Skirm</th><th class="titre">Cav</th>
+                </tr>
+                </thead>
+                <tbody id="tableTeam2">
+
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <img src="img/logo.png" alt="Logo GDE">
+            <h3>Server: GDE Linebattle</h3>
+            <h3>Password : </h3><input type="text" placeholder="mot de passe">
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
