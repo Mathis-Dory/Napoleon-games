@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Classement</title>
+    <script src="js/utils.js"></script>
+    <script src="js/ntw3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="Author" content="Cody">
+</head>
+<body onload="creerClassement();">
+<!-- En tête -->
+<div>
+    <header>
+        <section id="header"><img width="auto" src="img/img1.jpg" alt="Image de Napoleon total war"></section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="ranked.html" title="Classement GDE">Classement</a>
+                </li>
+                <!-- Accueil -->
+                <li>
+                    <a href="ntw3.html" title="NTW3 Calculator by GDE">Calculator</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="introduction">
+            <h1>Classement des games NTW3</h1>
+            <p>
+                Bienvenue sur le classement NTW3, c'est ici que vous pouvez valider les parties ranked.
+                N'oubliez pas de poster le résultat sur notre Discord !
+            </p>
+            <h2>Fonctionnement</h2>
+            <p>
+            <ol>
+                <li>Entrez le nombre de joueurs.</li>
+                <li>Sélectionnez les joueurs de chaque équipe.</li>
+                <li>Indiquez l'équipe gagnante.</li>
+                <li>Visualisez le classement.</li>
+            </ol>
+            </p>
+        </section>
+    </header>
+</div>
+<!-- Corps -->
+<div>
+    <section class="corps">
+        <div>
+            <form id="formRanked" action=# onsubmit="validerRanked(this); return false;">
+                <fieldset id="fieldRanked">
+                    <label for="nbrOfPlayers">Nombre de joueurs: </label>
+                    <select id="nbrOfPlayers"><option>2</option><option>4</option><option>6</option><option>8</option></select>
+                    <input type="button" value="Valider" onclick="genererLesSelect(this); return false;">
+                        <fieldset id="rankedTeamCoa">
+                            <legend>Coalition</legend>
+                        </fieldset>
+                        <fieldset id="rankedTeamEmpire">
+                            <legend>Empire</legend>
+                        </fieldset>
+                </fieldset>
+                <div class="winFaction">
+                    <label for="whoWins">Faction victorieuse: </label>
+                    <select id="whoWins"><option>Empire</option><option>Coalition</option><option>Egalité</option></select>
+                </div>
+                <div class="actionForm">
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
+        </div><br>
+        <div id="rankedTable">
+            <table>
+                <caption>Classement</caption>
+                <thead>
+                <tr>
+                    <th>Rang</th><th>Joueur</th><th>Victoires</th><th>Defaites</th><th>Egalités</th><th>Ratio</th><th>Competences</th>
+                </tr>
+                </thead>
+                <tbody id="rankedPlayers">
+                    <tr><td>Cody</td><td>4</td><td>2</td><td>2</td><td>0.90</td><td>11600</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<!-- Footer-->
+<div>
+    <footer>
+        <p>Fait par Cody pour la GDE, version 1.2.3</p><p><img id="foot1" src="img/foot.jpg" alt="Portrait Napoleon" >lien du Discord: <strong><a href="https://discord.gg/mJACK6y">https://discord.gg/mJACK6y</a></strong><img alt="logo GDE"  id="foot2" src="img/gde.png"></p>
+    </footer>
+</div>
+</body>
+</html>

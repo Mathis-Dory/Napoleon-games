@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>NTW3 Calculator by GDE</title>
+    <script src="js/utils.js"></script>
+    <script src="js/ntw3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="Author" content="Cody">
+</head>
+<body onload="loadPage();">
+    <!-- En tête -->
+    <div>
+        <header>
+            <section id="header"><img width="auto" src="img/img1.jpg" alt="Image de Napoleon total war"></section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="ranked.html" title="Classement GDE">Classement</a>
+                    </li>
+                    <!-- Accueil -->
+                    <li>
+                        <a href="ntw3.html" title="NTW3 Calculator by GDE">Calculator</a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="introduction">
+                <h1>Bienvenue sur NTW3 Calculator</h1>
+                <p>
+                    Ce programme a été codé par <strong>Cody</strong> de la GDE ( t'as compris le jeu de mot ? Cody - codé ...).
+                    Son utilité est très simple, il permet de créer des équipes équilibrées et générer un nombre d'armée pour vos parties NTW3.<br>
+                    ATTENTION ce programme ne fonctionne que pour un nombre <strong>PAIR</strong> de joueurs.
+                </p>
+                <h2>Fonctionnement</h2>
+                <p>
+                    <ol>
+                        <li>Sélectionnez le nombre de joueurs.</li>
+                        <li>Sélectionnez les joueurs présents.</li>
+                        <li>Cliquez sur générer les équipes.</li>
+                        <li>Les équipes d'affichent ainsi qu'un nombre d'armée pour chaque équipe.</li>
+                        <li>Si vous n'êtes pas content cliquez sur reset.</li>
+                        <li>Amusez vous !</li>
+                    </ol>
+                </p>
+                <p>
+                <h2> Liste des joueurs :</h2>
+                <ul id="listPlayers">
+
+                </ul>
+                <form id="formAddPlayer" action="#" onsubmit="addPlayer(); return false;">
+                    <input type="submit" value="Ajouter un joueur">
+                </form>
+                <form id="formRemovePlayer" action="#" onsubmit="removePlayer(); return false;">
+                    <input type="submit" value="Supprimer un joueur">
+                </form>
+                </p>
+            </section>
+        </header>
+    </div>
+    <!-- Corps -->
+    <div>
+        <section class="corps">
+                <div>
+                    <form id="formPlayers" action=# onsubmit="genererArmy(this); return false;">
+                        <fieldset id="addPlayers">
+                        <legend>Qui est présent ?</legend>
+                            <label for="nbrPlayers">Nombre de joueurs: </label>
+                            <select id="nbrPlayers"><option>2</option><option>4</option><option>6</option><option>8</option></select>
+                            <input type="button" value="Valider"  onclick="genererLesSelectNonRanked(this);"><br>
+                            <section id="selectPlayers">
+
+                            </section>
+                        </fieldset>
+                        <div class="actionForm">
+                            <input type="submit" value="Générer">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+                </div><br>
+                <div id="teamTables">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Empire</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableTeamImpe">
+
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Coalition</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableTeamCoa">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <section id="whichNumber">
+                        <h3>Nombre pour les armées: </h3>
+                        <p id="numberArmy"></p>
+                    </section>
+                </div>
+        </section>
+    </div>
+    <!-- Footer-->
+    <div>
+        <footer>
+            <p>Fait par Cody pour la GDE, version 1.2.3</p><p><img id="foot1" src="img/foot.jpg" alt="Portrait Napoleon" >lien du Discord: <strong><a href="https://discord.gg/mJACK6y">https://discord.gg/mJACK6y</a></strong><img alt="logo GDE"  id="foot2" src="img/gde.png"></p>
+        </footer>
+    </div>
+</body>
+</html>

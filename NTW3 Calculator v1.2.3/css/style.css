@@ -1,0 +1,144 @@
+table{
+    empty-cells: hide;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+td, th{
+    border: black 1px solid;
+    width: 12em;
+    text-align: center;
+    background-color: white;
+
+}
+
+#addPlayers{
+    text-align: center;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    width: 90em;
+    margin-right: auto;
+    margin-left: auto;
+}
+body{
+    background-color: floralwhite;
+    font-family: "Arial";
+}
+legend{
+    font-weight: bold;
+    border: solid 1px black;
+    background-color: floralwhite;
+}
+#header{
+    text-align: center;
+
+}
+
+.introduction{
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+}
+
+#teamTables{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    clear: both;
+    margin-bottom: 3em;
+}
+#whichNumber{
+    text-align: center;
+}
+
+#numberArmy{
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: fantasy;
+}
+
+footer{
+    text-align: center;
+}
+.actionForm{
+    text-align: center;
+}
+input[type='submit'], input[type='button']{
+    width: 12em;
+}
+#foot2{
+    height: 5em;
+    margin-left: 5em;
+}
+#foot1{
+    height: 5em;
+    margin-right: 5em;
+}
+nav{
+
+    background-color: wheat;
+    height: 150px;
+    width: 100%;
+}
+
+nav li{
+    margin-top: 50px;
+    float: right;
+    list-style-type: none;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+nav li:nth-child(1){
+    margin-right: 50px;
+
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    font-family:  fantasy;
+    font-size: 25px;
+    border: solid 5px beige;
+    border-radius: 15px;
+    padding: 0 0.15em;
+    width: 7em;
+    display: inline-block;
+    text-align: center;
+}
+
+nav a:hover{
+    color: crimson;
+}
+
+nav a:active{
+    color: black;
+}
+
+#selectPlayers{
+    display: block;
+    width: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+#selectPlayers select{
+    margin-bottom: 1em;
+}
+
+.winFaction{
+    margin-top: 2em;
+    margin-right:auto;
+    margin-left: auto;
+    width: 10em;
+    margin-bottom: 3em;
+}
+
+#whoWins{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 10em;
+}
